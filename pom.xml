@@ -8,6 +8,7 @@
 	<modules>
 		<module>lambdas</module>
 		<module>files</module>
+		<module>patterns</module>
 	</modules>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
