@@ -16,6 +16,7 @@ import static pl.andrzejszywala.samples.lambdas.LambdaSamples.City.Warsaw;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
@@ -223,5 +224,12 @@ public class LambdaSamples {
 				   .map(Person::getAge)
 				   .collect(toSet()));
 	}
-	
+
+	@Test
+	public void topOldest() {
+		System.out.println(persons.stream()
+		       .sorted(Comparator.comparingInt(Person::getAge).reversed())
+		       .limit(2)
+		       .collect(toList()));
+	}
 }
